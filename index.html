@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Male Tinted Gazelle</title>
-    <meta property="og:title" content="Male Tinted Gazelle" />
+    <title>Bundala Nature Resort</title>
+    <meta property="og:title" content="Bundala Nature Resort" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -385,6 +385,20 @@
                         link.addEventListener("click", closeMobileMenu)
                       })
 
+                      function doNothing(e){
+                        e.preventDefault()
+                      }
+                      document.getElementById('iq-form).onclick = doNothing;
+
+                      document.getElementById('thq_button_q5pj').onclick = function() {
+                        arriveDate = document.getElementById('check-in').value
+                        departDate = document.getElementById('check-out').value
+                        numberOfGuests = document.getElementById('thq_number_IL4I').value
+                        roomType = document.getElementById('thq_dropdown_lJC0').value
+                        window.open(`https://wa.me/94718256817?text=Hi%2C%20can%20I%20get%20more%20details%20for%20a%20stay%20from%20${arriveDate}%20to%20${departDate}%20at%20Bundala%20Nature%20Resort%3F
+I%20prefer%20to%20have%20${roomType}.%20The%20number%20of%20guests%20is%20${numberOfGuests}.`, '_blank')
+                      }
+
                       const checkIn = document.getElementById("check-in")
                       const checkOut = document.getElementById("check-out")
                       const today = new Date().toISOString().split("T")[0]
@@ -425,9 +439,7 @@
               </div>
               <div class="booking-inquiry-bar home-thq-booking-inquiry-bar-elm">
                 <form
-                  action="/inquire"
-                  method="POST"
-                  data-form-id="b6dc3a2f-00a7-4dcd-85bf-0d75335f08f6"
+                  id="iq-form"
                   class="booking-form"
                 >
                   <div class="form-group-row">
@@ -544,7 +556,6 @@
                       </div>
                     </div>
                     <a
-                      href="https://wa.me/94718256817?text=Hi%20Bundala%20Nature%20Resort"
                       id="thq_button_q5pj"
                       name="button"
                       data-form-field-id="thq_button_q5pj"
