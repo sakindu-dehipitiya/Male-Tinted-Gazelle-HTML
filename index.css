@@ -168,13 +168,21 @@
   min-height: 100vh;
 }
  
+.home-thq-hero-mask-container-elm {
+  display: flex;
+  align-items: flex-end;
+}
+ 
 .home-thq-hero-overlay-elm {
   background-color: rgba(53, 44, 44, 0.55);
 }
  
 .home-thq-hero-content-wrapper-elm {
-  height: 925px;
+  width: 1200px;
+  height: 770px;
+  max-height: 100%;
   padding-top: 67px;
+  padding-bottom: 40px;
   justify-content: flex-end;
 }
  
@@ -396,4 +404,31 @@
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+}
+ 
+@media(max-width: 991px) {
+  .home-thq-hero-content-wrapper-elm {
+    max-width: 100%;
+  }
+}
+ 
+@media(max-width: 479px) {
+  .home-thq-hero-mask-container-elm {
+    display: flex;
+    align-items: flex-end;
+  }
+  .home-thq-hero-overlay-elm {
+    display: flex;
+    align-items: flex-end;
+  }
+  .home-thq-hero-content-wrapper-elm {
+    width: auto;
+    max-height: 100%;
+    padding-bottom: 40px;
+    justify-content: flex-end;
+  }
+  .home-thq-booking-inquiry-bar-elm {
+    height: 462px;
+    position: relative;
+  }
 }
