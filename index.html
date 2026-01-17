@@ -389,14 +389,14 @@
                         e.preventDefault()
                       }
                       document.getElementById('iq-form').onclick = doNothing;
-
+                      
                       document.getElementById('thq_button_q5pj').onclick = function() {
                         arriveDate = document.getElementById('check-in').value
                         departDate = document.getElementById('check-out').value
                         numberOfGuests = document.getElementById('thq_number_IL4I').value
                         roomType = document.getElementById('thq_dropdown_lJC0').value
-                        window.open(`https://wa.me/94718256817?text=Hi%2C%20can%20I%20get%20more%20details%20for%20a%20stay%20from%20${arriveDate}%20to%20${departDate}%20at%20Bundala%20Nature%20Resort%3F
-I%20prefer%20to%20have%20${roomType}.%20The%20number%20of%20guests%20is%20${numberOfGuests}.`, '_blank')
+                        document.getElementById('thq_button_q5pj').href = `https://wa.me/94718256817?text=Hi%2C%20can%20I%20get%20more%20details%20for%20a%20stay%20from%20${arriveDate}%20to%20${departDate}%20at%20Bundala%20Nature%20Resort%3F
+I%20prefer%20to%20have%20${roomType}.%20The%20number%20of%20guests%20is%20${numberOfGuests}.`
                       }
 
                       const checkIn = document.getElementById("check-in")
