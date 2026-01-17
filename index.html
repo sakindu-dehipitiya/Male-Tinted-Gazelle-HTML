@@ -389,8 +389,12 @@
                     //  e.preventDefault()
                     //}
                     //document.getElementById('iq-form').onclick = doNothing;
-                      
-                      document.getElementById("thq_button_q5pj").onclick = () => {
+                      var step = 0;
+                      document.getElementById("thq_button_q5pj").onclick = (e) => {
+                        if (step == 0) {
+                          e.preventDefault();
+                          document.getElementById("thq_button_q5pj").target = "_blank"
+                        }
                         arriveDate = document.getElementById("check-in").value
                         departDate = document.getElementById("check-out").value
                         numberOfGuests = document.getElementById("thq_number_IL4I").value
@@ -556,9 +560,8 @@ I%20prefer%20to%20have%20${roomType}.%20The%20number%20of%20guests%20is%20${numb
                       </div>
                     </div>
                     <a
-                      href = "#"
+                      href = "https://google.com"
                       id="thq_button_q5pj"
-                      target="_blank"
                       class="home-thq-btn-elm1 btn btn-lg booking-submit btn-primary"
                     >
                       Inquire
